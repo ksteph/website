@@ -36,6 +36,37 @@
 
   </script>
 
+  <script>
+  fetch('projects.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('projects-html').innerHTML = html;
+    })
+    .catch(error => {
+      console.error('Failed to load projects.html:', error);
+    });
+</script>
+
+  <script>
+  fetch('students.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('students-html').innerHTML = html;
+    })
+    .catch(error => {
+      console.error('Failed to load students.html:', error);
+    });
+</script>
 
 </head>
 
@@ -103,15 +134,10 @@
             Berkeley</a>.
         </p>
         <p class="lead mb-2">
-          My research is in computer science education, both the study of learning computer science and applying
-          computer
-          science to education problems. My research focus is on scaling classes, such as how do we add more students to
-          a
-          class without sacrificing quality? I pursue this research by examining data from course tools to find
-          interpretable data-driven insights that inform learning interventions.
+          My research is in computer science education, encompassing both the study of learning computer science and its application to education problems. My research focus is on scaling classes, specifically exploring how to add more students without compromising quality. I pursue this research by examining data from course tools to find interpretable data-driven insights that inform learning interventions.
         </p>
         <p class="lead mb-2">
-          I'm also the creator of <a href="https://csedpodcast.org/">The CS-Ed Podcast</a>.
+          I'm also the creator of <a href="https://csedpodcast.org/">The CS-Ed Podcast</a>, and I blog about my teaching practices and thoughts on being a professor.
         </p>
         <p class="lead mb-5">
           <a href="https://csedpodcast.org/">
@@ -209,7 +235,7 @@
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Associate Professor of the Practice</h3>
-            <div class="subheading mb-1">Duke University</div>
+            <div class="subheading mb-1">Computer Science, Duke University</div>
             <p>
               See my <a href="#teaching">Teaching</a> Section for what I teach.
             </p>
@@ -218,11 +244,21 @@
             <span class="text-primary">January 2024 - Now</span>
           </div>
         </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">Associate Director of Undergraduate Studies</h3>
+            <div class="subheading mb-1">Computer Science, Duke University</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2024 - Now</span>
+          </div>
+        </div>
         
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Assistant Professor of the Practice</h3>
-            <div class="subheading mb-1">Duke University</div>
+            <div class="subheading mb-1">Computer Science, Duke University</div>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">December 2017 - Dec 2023</span>
@@ -232,7 +268,7 @@
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Co-Instructor</h3>
-            <div class="subheading mb-1">University of California, Berkeley</div>
+            <div class="subheading mb-1">EECS, University of California, Berkeley</div>
             <p>
               Co-taught <a href="http://www.cs.berkeley.edu/~dawnsong/teaching/f12-cs194/">CS194-25 Special topics:
                 Building Your Next Generation Education Technologies</a> with <a
@@ -263,6 +299,13 @@
         </div>
 
         <h3 class="mb-0">Conferences</h3>
+        <div class="resume-item d-flex flex-column flex-md-row mb-0">
+          <div class="resume-content mr-auto">
+            <p>
+              Shao-Heng Ko, Matthew Zahn, <b>Kristin Stephens-Martinez</b>, Yesenia Velasco, Lina Battestilli, and Sarah Heckman. 2025. <a href="pubs/icer2025relationships.pdf">Relationships Between Computing Students' Characteristics, Help-Seeking Approaches, and Help-Seeking Behavior in Introductory Courses and Beyond</a>. In Proceedings of the 2025 ACM Conference on International Computing Education Research V.1 (ICER '25).
+            </p>
+          </div>
+        </div>
         <div class="resume-item d-flex flex-column flex-md-row mb-0">
           <div class="resume-content mr-auto">
             <p>
@@ -406,6 +449,17 @@
           </div>
         </div>
 
+        <div class="subheading mb-1">CompSci/Educ 171CN Learning How to Learn with AI</div>
+        <div class="resume-item d-flex flex-column flex-md-row mb-0">
+          <div class="resume-content mr-auto">
+            <p>
+              <a href="https://sites.duke.edu/compsci171cnfa2025/">Fall 2025</a>
+              <br>
+              This course will explore how we can learn with generative AI (GenAI). GenAI is a general tool and, therefore, could be used to support learning. However, it may also hinder learning if used ineffectively. This course will explore these ideas by learning how humans learn, the implications of how learning works, ways to use AI to support learning, and demystifying how AI works to become skeptical in a more precise way. This is a <a href="https://trinity.duke.edu/constellations">Constellation Course</a> for the “How does artificial intelligence impact human experiences?” constellation.
+            </p>
+          </div>
+        </div>
+
         <div class="subheading mb-1">CompSci 201 Data Structures and Algorithms</div>
         <div class="resume-item d-flex flex-column flex-md-row mb-0">
           <div class="resume-content mr-auto">
@@ -425,6 +479,7 @@
         <div class="resume-item d-flex flex-column flex-md-row mb-0">
           <div class="resume-content mr-auto">
             <p>
+              <a href="https://sites.duke.edu/compsci216fa2025/">Fall 2025</a>;
               <a href="https://sites.duke.edu/compsci216sp2025/">Spring 2025</a>;
               <a href="https://sites.duke.edu/compsci216fa2024/">Fall 2024</a>;
               <a href="https://sites.duke.edu/compsci216sp2024/">Spring 2024</a>;
@@ -539,119 +594,17 @@
               Below are some of my research projects.
             </p>
 
-            <div class="subheading mb-1">Student Help Seeking Behavior</div>
-            <p>
-              Using data we currently can collect from the class, this project focuses on understanding student
-              help-seeking behavior. Which students are seeking help? Where are they seeking help? What kind of help are
-              students seeking? What kind of help are students receiving? How do we encourage students to seek help only
-              when they need it? How do we improve the help students are receiving? This project is in the data collection and analysis phase. We have data from office hours, class forums, and class materials.
-            </p>
-            <p>
-              Funded by NSF Awards <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1934965&HistoricalAwards=false">#1934965</a> and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2336805&HistoricalAwards=false">#2336805</a>. Overall project details on our <a href="https://csed-help-seeking.github.io/csed-help-seeking/">CSED Help-Seeking Website</a>.
-            </p>
-            <p>
-              Contributors:
-              <a href="https://shaohengko.github.io/">Shao-Heng Ko</a> (Summer 2022 - now),
-              <a href="http://www.linkedin.com/in/ricardojurena">Ricardo Urena</a> (Summer 2025 - now),
-              Zehavi Rodriguez (Summer 2025 - now),
-              Sona Suryadevara (Summer 2021 - Spring 2022)
-            </p>
-
-            <div class="subheading mb-1">ChatBots for Learning</div>
-            <p>
-              This project focuses on understanding how ChatBots can be incorporated into a student's learning process to enhance their learning.
-            </p>
-            <p>
-              Contributors:
-              <a href="https://www.linkedin.com/in/kevin-alvarenga-2a2454292/">Kevin Alvarenga</a> (Fall 2024),
-              <a href="https://www.linkedin.com/in/michelle-brown-69832a262/">Michelle Brown</a>  (Fall 2024)
-            </p>
-            
-            <div class="subheading mb-1">Hybrid, Flipped, Just-in-time Teaching</div>
-            <p>
-              This line of work intertwines closely with what happens in the classroom. We mean hybrid as students can attend class online synchronously. Flipping class material involves students consuming learning materials outside the classroom, taking pre-class quizzes on that content, and applying their learning in the classroom. Just-in-time means the quiz results are analyzed and used to inform what is covered and focused on in class.
-            </p>
-            <p>
-              Contributors:
-              <a href="https://janet-jiang.github.io/">Janet Jiang</a> (Summer 2023 - now),
-              <a href="https://shaohengko.github.io/">Shao-Heng Ko</a> (Summer 2023 - now),
-              Jerry He (Summer 2023),
-              Salma El Otmani (Summer 2023)
-            </p>
-
-            <div class="subheading mb-1">Open-Ended Autograders</div>
-            <p>
-              Autograders help us improve CS teaching by enabling us to give students instant feedback. However, autograders often focus on expecting students to write code that behaves the same. Given specific inputs, the code should return the exact same output regardless of which student submission the autograder is checking. This research project explores breaking that paradigm. How can we design assignments that allow students to be creative while also enabling us to autograde these assignments for the core learning objectives they are assessing?
-            </p>
-            <p>
-              Contributors:
-              Abby Melton (Summer 2025),
-              Bryanna Erickson [Berea College] (Summer 2025),
-              Jerry Zou (Summer 2025),
-              <a href="https://amiraref.com/">Amir Aref</a> [Berea College] (Summer 2025),
-              <a href="https://nikita206.github.io/">Nikita Agarwal</a> (Summer 2024),
-              <a href="https://kevinalv22.github.io/">Kevin Alvarenga</a> (Summer 2024),
-              <a href="https://asuri105.github.io/">Arunima Suri</a> (Summer 2024)
-            </p>
-
-
-            <div class="subheading mb-1">UTA and student diversity</div>
-            <p>
-              This work examines the diversity of students and undergraduate teaching assistants (UTAs). We are exploring
-              the relationship between the demographic diversity of these two groups and other factors that spark
-              our interest. Our first project focused on the historical diversity of these two groups over the past eight years.
-            </p>
-            <p>
-              Contributors:
-              <a href="https://janet-jiang.github.io/">Janet Jiang</a> (Fall 2023 - now),
-              <a href="https://www.linkedin.com/in/divya-nataraj/">Divya Nataraj</a> (Fall 2023 - Spring 2024)
-            </p>
-
-            <div class="subheading mb-1">Helping Novices Debug Relational Queries (<a
-                href="https://dukedb-hnrq.github.io/">HNRQ</a>)</div>
-            <p>
-              This project is with <a href="https://users.cs.duke.edu/~junyang/">Jun Yang</a> and <a
-                href="https://users.cs.duke.edu/~sudeepa/">Sudeepa Roy</a>. Our goal is to create an interactive
-              debugger
-              called I-Rex for SQL. <a href="https://users.cs.duke.edu/~sudeepa/papers/SIGMOD2019-ratest.pdf">I-Rex</a>
-              allows users to interactively "trace" through SQL queries, understand how they execute, and debug wrong
-              queries.
-            </p>
-            <p>
-              My work on this project focuses on the learning and user experience of the tool. So far, we've run
-              preliminary user studies to learn about the overall study experience. Other ideas we have for this project
-              include: (1) Conducting cognitive walkthrough while an expert is debugging for the sake of designing a
-              debugging process for beginners, (2) A controlled learning gains study while learners are using the tool,
-              and (3) More user studies.
-            </p>
-            <p>
-              Contributors: See the <a href="https://dukedb-hnrq.github.io/">HNRQ Project</a> for more details.
-            </p>
-
-            <div class="subheading mb-1">CS101 Reviewer App and Formative Assessments</div>
-            <p>
-              <a href="https://cs101-quiz.cs.duke.edu/">CS101 Reviewer App</a> is a web application that provides an online quiz tool to students enrolled in CS101 at Duke University. It enables students to quiz themselves on CS101 topics with carefully designed questions that check for specific misunderstandings. These questions are computer generated from a template. Formative assessments are course materials that seek to identify a studet's current understanding of the material. This project includes improving the Reviewer app and investigating assessments generally in a course with a focus on formative assessments.
-            </p>
-            <p>
-              Contributors:
-              <a href="https://www.linkedin.com/in/hao-x-belle/">Belle Xu</a> (Summer 2021 - Spring 2023),
-              <a href="https://www.linkedin.com/in/rhea-tejwani/">Rhea Tejwani</a> (Spring 2023),
-              Bianca Saputra (Fall 2021 - Spring 2022),
-              Brian Janger (Summer 2021),
-              Manith Luthria (Summer 2021),
-              <a href="https://www.linkedin.com/in/anshul-shah99/">Anshul Shah</a> (Spring 2020 - Spring 2021),
-              <a href="https://liujon23.github.io/">Jonathan Liu</a> (Fall 2020 - Spring 2021),
-              Andrew Elcock (Spring 2021),
-              Benjamin Stewart (Summer 2020),
-              Frank Tang (Summer 2020),
-              Eric Young (Summer 2020)
-            </p>
+            <div id="projects-html"></div>
 
           </div>
         </div>
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Students</h3>
+            <p>Listed since I last worked with them.</p>
+
+            <div id="students-html"></div>
+
             <div class="subheading mb-1">Ph.D.</div>
             <div>
               <a href="https://shaohengko.github.io/">Shao-Heng Ko</a> (Current)
